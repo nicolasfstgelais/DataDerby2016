@@ -12,23 +12,25 @@ geoMean <- function(x){
 wtr=read.csv("prec_Trudeau.csv",header=T)
 wtr2=read.csv("weather_Trudeau.csv",header=T)
 
-urls=read.csv("urls.csv",header=F,row.names=1)
+#import urls for QUALO file and merge them in QUALO
+urls<-read.csv(text=getURL("https://raw.githubusercontent.com/nicolasfstgelais/DataDerby2016/master/QUALO_raw_data/urls"), header=T)
 for(i in 1:nrow(urls)){
-  if(i==1)WQ=read.csv(as.character(urls[i,]), header = TRUE)[,1:7]
-  if(i!=1)WQ=rbind(WQ,read.csv(as.character(urls[i,]), header = TRUE)[,1:7])
+  if(i==1)QUALO<-read.csv(text=getURL(as.character(urls[i,])), header=TRUE)[,1:7]
+  if(i!=1)QUALO=rbind(QUALO,read.csv(text=getURL(as.character(urls[i,])), header = TRUE)[,1:7])
 }
 
-QUALO<-read.csv(text=getURL("https://raw.githubusercontent.com/nicolasfstgelais/DataDerby2016/master/QUALO_2003-2014.csv"), header=T)
-  
-
-#export data
+#merge together all QUALO files
+# select variables that were measured each year
 cnames=c("Point d'echantillonnage","Date","Temperature(oc)","Conductivite(us/cm2)","pH","Signe","Coliformes (colonies/100ml)")
-colnames(WQ)=cnames
-WQ$`Temperature(oc)`=gsub(",",".",WQ$`Temperature(oc)`)
-WQ$`Temperature(oc)`=as.numeric(WQ$`Temperature(oc)`)
-WQ$`Conductivite(us/cm2)`=as.numeric(WQ$`Conductivite(us/cm2)`)
-WQ$pH=as.numeric(WQ$pH)
-WQ$`Coliformes (colonies/100ml)`=as.numeric(WQ$`Coliformes (colonies/100ml)`)
+colnames(QUALO)=cnames
+#change , for . for temperature
+QUALO$`Temperature(oc)`=gsub(",",".",QUALO$`Temperature(oc)`)
+#all variables as numeric
+QUALO$`Temperature(oc)`=as.numeric(QUALO$`Temperature(oc)`)
+QUALO$`Conductivite(us/cm2)`=as.numeric(QUALO$`Conductivite(us/cm2)`)
+QUALO$pH=as.numeric(QUALO$pH)
+QUALO$`Coliformes (colonies/100ml)`=as.numeric(QUALO$`Coliformes (colonies/100ml)`)
+
 setwd("C://Users//Nicolas//Desktop//QUAL")
 WQ$Signe=NULL
 write.csv(WQ,"QUALO_2003-2014.csv")
