@@ -9,8 +9,9 @@ geoMean <- function(x){
   (prod(x))^(1/length(x))
 }
 
-wtr=read.csv("prec_Trudeau.csv",header=T)
-wtr2=read.csv("weather_Trudeau.csv",header=T)
+precip<-read.csv(text=getURL("https://raw.githubusercontent.com/nicolasfstgelais/DataDerby2016/master/QUALO_raw_data/trudeau_precip.csv"), header=T)
+weather<-read.csv(text=getURL("https://raw.githubusercontent.com/nicolasfstgelais/DataDerby2016/master/QUALO_raw_data/trudeau_weather_gen.csv"), header=T)
+
 
 #import urls for QUALO file and merge them in QUALO
 urls<-read.csv(text=getURL("https://raw.githubusercontent.com/nicolasfstgelais/DataDerby2016/master/QUALO_raw_data/urls"), header=T)
@@ -33,38 +34,57 @@ QUALO$`Coliformes (colonies/100ml)`=as.numeric(QUALO$`Coliformes (colonies/100ml
 
 setwd("C://Users//Nicolas//Desktop//QUAL")
 WQ$Signe=NULL
-write.csv(WQ,"QUALO_2003-2014.csv")
+#write.csv(WQ,"QUALO_2003-2014.csv")
 WQ2=read.csv("QUALO_2003-2014.csv")
 which(is.na(WQ2$Temperature.oc.))
 
-## normalize date format
-for(i in 1:nrow(wtr)){
-  t=paste(substring(wtr[i,"DATE"],c(1,5,7),c(4,6,8)),sep="-")
-   wtr[i,"DATE"]=paste(t[1],t[2],t[3],sep="-")}
+## normalize date format in the weather and precip files
+for(i in 1:nrow(precip)){
+  t=paste(substring(precip[i,"DATE"],c(1,5,7),c(4,6,8)),sep="-")
+   precip[i,"DATE"]=paste(t[1],t[2],t[3],sep="-")}
 
-do.call(strsplit(rbind,as.character(wtr[,"DATE"]),"-"))
-wtr$m=as.data.frame(do.call(rbind,strsplit(as.character(wtr[,"DATE"]),"-")))[2]
-wtr$y=as.data.frame(do.call(rbind,strsplit(as.character(wtr[,"DATE"]),"-")))[1]
+do.call(strsplit(rbind,as.character(weather[,"DATE"]),"-"))
+precip$m=as.data.frame(do.call(rbind,strsplit(as.character(precip[,"DATE"]),"-")))[2]
+precip$y=as.data.frame(do.call(rbind,strsplit(as.character(precip[,"DATE"]),"-")))[1]
 
-
-for(i in 1:nrow(wtr2)){
-  wtr2[i,"date"]=strsplit(as.character(wtr2[i,"time"])," ")[[1]][1]
+i=2
+for(i in 1:nrow(weather)){
+  weather[i,"date"]=strsplit(as.character(weather[i,"time"])," ")[[1]][1]
    }
 
-wtr2$date=paste(wtr2$year,wtr2$month,wtr2$day,sep="-")
+  #weather$date=paste(weather$year,weather$month,weather$day,sep="-")
 
-WQ[,"Date"]=as.character(WQ[,"Date"])
+QUALO[,"Date"]=as.character(QUALO[,"Date"])
 i=9973
-for(i in 1:nrow(WQ)){
-  dateT=as.character(WQ[i,"Date"])
-  if(grepl("/",dateT))WQ[i,"Date"]=gsub("/","-",dateT)
-  if(grepl(":",dateT))WQ[i,"Date"]=strsplit(dateT," ")[[1]][1]
+for(i in 1:nrow(QUALO)){
+  dateT=as.character(QUALO[i,"Date"])
+  if(grepl("/",dateT))QUALO[i,"Date"]=gsub("/","-",dateT)
+  if(grepl(":",dateT))QUALO[i,"Date"]=strsplit(dateT," ")[[1]][1]
 }
 
+dates=as.character(QUALO$Date)
+  weather[as.character(weather$date)%in%dates,]
+
+
+weatherSel=weather[,c("year","month","day","wd","ws","temp","dew_point","atmos_pres","rh")]
+
 ## summarize weather for every date
-WQ$p0=NA;WQ$p2=NA;WQ$p1=NA;WQ$p5=NA;WQ$t2=NA;WQ$t5=NA;WQ$pm2=NA;WQ$pm5=NA
+weatherSel$p0=NA;
+weatherSel$p1=NA;
+weatherSel$p2=NA;
+weatherSel$p3=NA;
+weatherSel$p4=NA;
+weatherSel$p5=NA;
+weatherSel$t1=NA;
+weatherSel$t2=NA;
+weatherSel$t3=NA;
+weatherSel$t4=NA;
+weatherSel$t5=NA;
+WQ$pm2=NA;
+WQ$pm5=NA
 WQ$m=NA;WQ$y=NA
-  for(i in 1:nrow(WQ))
+  
+for(i in 1:nrow(WQ))
 {
   ds=which(wtr$DATE%in%WQ[i,"Date"])
   ds2=which(wtr2$date%in%WQ[i,"Date"])
