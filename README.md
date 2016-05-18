@@ -14,6 +14,11 @@
     * Durée: 1993-2014
     * Source : Environnement Canada
     * Plus d’info : http://ec.gc.ca/inrp-npri/default.asp?lang=Fr&n=B5C1EAB8-1
+  4. *DB_QUALO_mtl.csv - Données Qualité de l'eau en rive de Montréal* 
+    * Détails: 
+    * Durée: 2003-2014
+    * Source : Ville de Montréal
+    * Plus d’info : 
 		
 ### B) Shapefiles/Locations
   1. *milieu_humide_mtl – Shapefile des milieux humides Montréalais*
