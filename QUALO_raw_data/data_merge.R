@@ -1,8 +1,12 @@
 rm(list=ls(all=TRUE))
+
 library(plyr)
 library(lubridate)
 library(rms)
 library(RCurl)
+
+
+isd_stations_search(lat = NULL, lon = NULL, radius = NULL, bbox = NULL)
 
 setwd("C://Users//Nicolas//Desktop//QUAL")
 geoMean <- function(x){
