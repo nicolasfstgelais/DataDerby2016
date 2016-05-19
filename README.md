@@ -53,7 +53,7 @@ Pour plus de données ouvertes:
   3. [Environnement Canada](http://ouvert.canada.ca/fr)
   4. [Ville de Montréal](http://donnees.ville.montreal.qc.ca/group)
   5. [MDDELCC Quebec](http://www.mddelcc.gouv.qc.ca/eau/portail.htm)
-  6. Géolocalisation des articles en biodiversité [BAM](http://quebio.ca/fr/bam)
+  6. Géolocalisation des articles en biodiversité: [BAM](http://quebio.ca/fr/bam)
 		
 ### B) Shapefiles/Locations
   1. *milieu_humide_mtl – Shapefile des milieux humides Montréalais*
