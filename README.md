@@ -87,4 +87,8 @@ Pour plus de données ouvertes/For more open data:
      * Détails: Locations des sites du NPRI (csv)/ Locations for NPRI sites
      * Source : Environnement Canada
      * Plus d’info : http://ec.gc.ca/inrp-npri/default.asp?lang=Fr&n=B5C1EAB8-1
+  4. *Link to aerial photographs - Montreal*
+     * Durée: 1925-1992 
+     * Source : Ville de Montréal
+     * Plus d’info : http://ec.gc.ca/inrp-npri/default.asp?lang=Fr&n=B5C1EAB8-1
 
