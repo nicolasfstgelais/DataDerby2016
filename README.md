@@ -40,8 +40,8 @@
   8. *DB_weather_yul.csv* 
     * Détails:  Température générale
     * Durée: 2000-2004
-    * Source : NOAA?
-    * Plus d’info : ?
+    * Source : stationaRy R package (ISD)
+    * Plus d’info : https://cran.r-project.org/web/packages/stationaRy/stationaRy.pdf
   9. *DB_RUISSO_mtl.csv* 
     * Détails:  
     * Fréquence: Annuelle
@@ -55,7 +55,7 @@
     * Source : GSIN
     * Plus d’info : http://www.gisin.org/DH.php?WC=/WS/GISIN/GISINDirectory/home_new.html&WebSiteID=4
 
-Pour plus de données ouvertes:
+Pour plus de données ouvertes/For more open data:
   1. [Observatoire global du Saint-Laurent](https://ogsl.ca/fr/)
   2. [Gouvernement du Québec](https://www.donneesquebec.ca/fr/)
   3. [Environnement Canada](http://ouvert.canada.ca/fr)
@@ -64,24 +64,24 @@ Pour plus de données ouvertes:
   6. Géolocalisation des articles en biodiversité: [BAM](http://quebio.ca/fr/bam)
 		
 ### B) Shapefiles/Locations
-  1. *milieu_humide_mtl – Shapefile des milieux humides Montréalais*
-    * Détails: Shapefile (dossier)
+  1. *milieu_humide_mtl*
+    * Détails: Shapefile (fichier) des milieux humides Montréalais/ of wetlands Montreal
     * Source : Ville de Montréal
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/milieu-humide
-  2. *cours_deau-mtl – Shapefile des cours d’eau Montréalais*
-    * Détails: Shapefile (dossier)
+  2. *cours_deau-mtl*
+    * Détails: Shapefile des cours d’eau Montréalais/ of streams Montreal
     * Source : Ville de Montréal
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/cours-d-eau-et-fosse
-  3. *stationsQUALO – Stations d'échantillonage QUALO*
-    * Détails: Shapefile (dossier)
+  3. *stationsQUALO*
+    * Détails: Shapefile (dossier) Stations d'échantillonage QUALO/ QUALO sampling stations
     * Source : Ville de Montréal
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/rsma-points-d-echantillonnage-qualo
   3. *stationsRUISSO – Stations d'échantillonage RUISSO*
-    * Détails: csv 
+    * Détails: Stations d'échantillonage RUISSO (csv) / RUISSO sampling stations
     * Source : Ville de Montréal
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/rsma-points-d-echantillonnage-ruisso
   4. *NPRI_Locations.csv*
-     * Détails: Locations des sites du NPRI (csv)
+     * Détails: Locations des sites du NPRI (csv)/ Locations for NPRI sites
      * Source : Environnement Canada
      * Plus d’info : http://ec.gc.ca/inrp-npri/default.asp?lang=Fr&n=B5C1EAB8-1
 
