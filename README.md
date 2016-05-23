@@ -9,8 +9,8 @@
     * Détails: 
     * Source : Environnement Canada
     * Plus d’info : https://ogsl.ca/fr/biodiversite/invertebres/ecrevisses/sommaire.html
-  3. *DB_NPRI_qc.csv - Inventaire national des rejets de polluants (INRP)* 
-    * Détails: Rejets milieux aquatiques
+ 3. *DB_NPRI_qc.csv* 
+    * Détails: Inventaire national des rejets de polluants(aquatiques)/National Pollutant Release Inventory(Aquatic)
     * Durée: 1993-2014
     * Source : Environnement Canada
     * Plus d’info : http://ec.gc.ca/inrp-npri/default.asp?lang=Fr&n=B5C1EAB8-1
@@ -21,12 +21,14 @@
     * Source : Ville de Montréal
     * Plus d’info : 
   5. *DB_waterLevel_LaPrairie.csv & *DB_waterLevel_PointeClaire.csv* 
-    * Détails:  niveau d'eau
+    * Détails:  water level (m)
+    * Frequency: Daily
     * Durée: 1967-2015
     * Source : Environnement Canada
     * Plus d’info : http://eau.ec.gc.ca/ 
   6. *DB_flow_LaSalle.csv* 
-    * Détails:  débit
+    * Détails:  flow (m3/s)
+    * Fréquence: Daily
     * Durée: 1955-2014
     * Source : Environnement Canada
     * Plus d’info : http://eau.ec.gc.ca/ 
@@ -46,7 +48,7 @@
     * Durée: 2011-2014
     * Source : 
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/rsma-donnees-ruisso-annuelle
-   10. *DB_invasive_sp_cdn.csv- Observations espèces invasives aux Canada* 
+  10. *DB_invasive_sp_cdn.csv- Observations espèces invasives aux Canada* 
     * Détails:  
     * Fréquence: NA
     * Durée: NA
