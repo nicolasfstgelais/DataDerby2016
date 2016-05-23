@@ -46,6 +46,12 @@
     * Durée: 2011-2014
     * Source : 
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/rsma-donnees-ruisso-annuelle
+   10. *DB_invasive_sp_cdn.csv- Observations espèces invasives aux Canada* 
+    * Détails:  
+    * Fréquence: NA
+    * Durée: NA
+    * Source : GSIN
+    * Plus d’info : http://www.gisin.org/DH.php?WC=/WS/GISIN/GISINDirectory/home_new.html&WebSiteID=4
 
 Pour plus de données ouvertes:
   1. [Observatoire global du Saint-Laurent](https://ogsl.ca/fr/)
