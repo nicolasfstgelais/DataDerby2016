@@ -35,8 +35,8 @@
   7. *DB_precip_yul.csv* 
     * Détails:  Précipitations
     * Durée: 2000-2016
-    * Source : NOAA?
-    * Plus d’info : ?
+    * Source : rNOAA package
+    * Plus d’info : https://cran.r-project.org/web/packages/rnoaa/rnoaa.pdf or https://ropensci.org/blog/2014/03/13/rnoaa/
   8. *DB_weather_yul.csv* 
     * Détails:  Température générale
     * Durée: 2000-2004
