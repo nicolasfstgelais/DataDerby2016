@@ -1,12 +1,13 @@
 # DataDerby2016 
 
 ### A) Bases de données
-  1. *DB_fish.csv – Présence/absence poissons*
-    * Détails: 
+  1. *DB_fish.csv*
+    * Détails: Presence/absence poisson/fish St-Laurent
     * Source : Réseau de suivi ichtyologique (PASL) - Poissons d'eau douce
     * Plus d’info :https://ogsl.ca/fr/biodiversite/poissons/mffp/sommaire.html
-  2. *DB_ crawfish.csv – Abondance écrevisse*
-    * Détails: 
+  2. *DB_ crawfish.csv*
+    * Détails: Abondance écrevisse/crawfish abundance
+    * Détails: Some dates are wrong
     * Source : Environnement Canada
     * Plus d’info : https://ogsl.ca/fr/biodiversite/invertebres/ecrevisses/sommaire.html
   3. *DB_NPRI_qc.csv* 
@@ -34,19 +35,21 @@
     * Plus d’info : http://eau.ec.gc.ca/ 
   7. *DB_precip_yul.csv* 
     * Détails:  Précipitations
+    * Fréquence: Daily
     * Durée: 2000-2016
     * Source : rNOAA package
     * Plus d’info : https://cran.r-project.org/web/packages/rnoaa/rnoaa.pdf or https://ropensci.org/blog/2014/03/13/rnoaa/
   8. *DB_weather_yul.csv* 
     * Détails:  Température générale
-    * Durée: 2000-2004
+    * Fréquence: Hourly
+    * Durée: 2000-20016
     * Source : stationaRy R package (ISD)
     * Plus d’info : https://cran.r-project.org/web/packages/stationaRy/stationaRy.pdf
   9. *DB_RUISSO_mtl.csv* 
-    * Détails:  
+    * Détails:  Qualité de l'eau ruisseaux Montréal / Streams water quality Montreal
     * Fréquence: Annuelle
     * Durée: 2011-2014
-    * Source : 
+    * Source : Ville de Montréal
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/rsma-donnees-ruisso-annuelle
   10. *DB_invasive_sp_cdn.csv- Observations espèces invasives aux Canada* 
     * Détails:   Observations espèces invasives aux Canada- Report of invasive species in canada
