@@ -9,8 +9,8 @@
     * Détails: 
     * Source : Environnement Canada
     * Plus d’info : https://ogsl.ca/fr/biodiversite/invertebres/ecrevisses/sommaire.html
-  3. *DB_NPRI_qc.csv - Inventaire national des rejets de polluants (INRP)* 
-    * Détails: Rejets milieux aquatiques
+  3. *DB_NPRI_qc.csv* 
+    * Détails: Inventaire national des rejets de polluants(aquatiques)/National Pollutant Release Inventory(Aquatic)
     * Durée: 1993-2014
     * Source : Environnement Canada
     * Plus d’info : http://ec.gc.ca/inrp-npri/default.asp?lang=Fr&n=B5C1EAB8-1
@@ -21,12 +21,14 @@
     * Source : Ville de Montréal
     * Plus d’info : 
   5. *DB_waterLevel_LaPrairie.csv & *DB_waterLevel_PointeClaire.csv* 
-    * Détails:  niveau d'eau
+    * Détails:  water level (m)
+    * Frequency: Daily
     * Durée: 1967-2015
     * Source : Environnement Canada
     * Plus d’info : http://eau.ec.gc.ca/ 
   6. *DB_flow_LaSalle.csv* 
-    * Détails:  débit
+    * Détails:  flow (m3/s)
+    * Fréquence: Daily
     * Durée: 1955-2014
     * Source : Environnement Canada
     * Plus d’info : http://eau.ec.gc.ca/ 
@@ -46,6 +48,12 @@
     * Durée: 2011-2014
     * Source : 
     * Plus d’info : http://donnees.ville.montreal.qc.ca/dataset/rsma-donnees-ruisso-annuelle
+  10. *DB_invasive_sp_cdn.csv- Observations espèces invasives aux Canada* 
+    * Détails:  
+    * Fréquence: NA
+    * Durée: NA
+    * Source : GSIN
+    * Plus d’info : http://www.gisin.org/DH.php?WC=/WS/GISIN/GISINDirectory/home_new.html&WebSiteID=4
 
 Pour plus de données ouvertes:
   1. [Observatoire global du Saint-Laurent](https://ogsl.ca/fr/)
@@ -53,7 +61,7 @@ Pour plus de données ouvertes:
   3. [Environnement Canada](http://ouvert.canada.ca/fr)
   4. [Ville de Montréal](http://donnees.ville.montreal.qc.ca/group)
   5. [MDDELCC Quebec](http://www.mddelcc.gouv.qc.ca/eau/portail.htm)
-   
+  6. Géolocalisation des articles en biodiversité: [BAM](http://quebio.ca/fr/bam)
 		
 ### B) Shapefiles/Locations
   1. *milieu_humide_mtl – Shapefile des milieux humides Montréalais*
