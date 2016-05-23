@@ -14,8 +14,8 @@
     * Durée: 1993-2014
     * Source : Environnement Canada
     * Plus d’info : http://ec.gc.ca/inrp-npri/default.asp?lang=Fr&n=B5C1EAB8-1
-  4. *DB_QUALO_mtl.csv - Données Qualité de l'eau en rive de Montréal* 
-    * Détails: 
+  4. *DB_QUALO_mtl.csv* 
+    * Détails: Données Qualité de l'eau en rive de Montréal/ Montreal water quality on shore
     * Fréquence: Hebdomadaire
     * Durée: 2003-2014
     * Source : Ville de Montréal
